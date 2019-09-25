@@ -7,6 +7,14 @@ void main() => runApp(MaterialApp(
 class Porfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        title: Text('Portfolio'),
+        centerTitle: true,
+        backgroundColor: Colors.grey[850],
+        elevation: 0,
+      ),
+    );
   }
 }
