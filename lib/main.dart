@@ -8,11 +8,11 @@ class Porfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.black,
         appBar: AppBar(
           title: Text('Portfolio'),
           centerTitle: true,
-          backgroundColor: Colors.grey[850],
+          backgroundColor: Colors.grey[900],
           elevation: 0,
         ),
         body: Padding(
@@ -26,7 +26,7 @@ class Porfolio extends StatelessWidget {
                     radius: 40,
                   ),
                 ),
-                Divider(height: 60, color: Colors.grey[800]),
+                Divider(height: 60, color: Colors.grey[700]),
                 Row(
                   children: <Widget>[
                     Icon(Icons.person, color: Colors.grey),
@@ -103,5 +103,17 @@ class Porfolio extends StatelessWidget {
                 ),
               ],
             )));
+  }
+}
+
+class Test extends StatefulWidget {
+  @override
+  _TestState createState() => _TestState();
+}
+
+class _TestState extends State<Test> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
