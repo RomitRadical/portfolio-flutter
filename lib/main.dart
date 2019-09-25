@@ -20,6 +20,13 @@ class Porfolio extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                Center(
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/image.jpg'),
+                    radius: 40,
+                  ),
+                ),
+                Divider(height: 60, color: Colors.grey[800]),
                 Row(
                   children: <Widget>[
                     Icon(Icons.person, color: Colors.grey),
