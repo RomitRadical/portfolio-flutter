@@ -4,7 +4,14 @@ void main() => runApp(MaterialApp(
       home: Porfolio(),
     ));
 
-class Porfolio extends StatelessWidget {
+class Porfolio extends StatefulWidget {
+  @override
+  _PorfolioState createState() => _PorfolioState();
+}
+
+class _PorfolioState extends State<Porfolio> {
+  int phone = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,27 +100,31 @@ class Porfolio extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 10),
-                Text(
-                  '+919916360735',
-                  style: TextStyle(
-                      color: Colors.amberAccent[200],
-                      letterSpacing: 2,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      '$phone',
+                      style: TextStyle(
+                          color: Colors.amberAccent[200],
+                          letterSpacing: 2,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          phone++;
+                        });
+                      },
+                      icon: Icon(
+                        Icons.edit,
+                        color: Colors.grey,
+                      ),
+                    )
+                  ],
+                )
               ],
             )));
-  }
-}
-
-class Test extends StatefulWidget {
-  @override
-  _TestState createState() => _TestState();
-}
-
-class _TestState extends State<Test> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
